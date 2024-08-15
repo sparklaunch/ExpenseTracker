@@ -29,7 +29,7 @@ class _ExpensesState extends State<Expenses> {
         title: const Text("Flutter Expense Tracker"),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: _openAddExpenseOverlay,
             icon: const Icon(Icons.add),
           ),
         ],
@@ -43,5 +43,10 @@ class _ExpensesState extends State<Expenses> {
         ],
       ),
     );
+  }
+
+  void _openAddExpenseOverlay() {
+    showModalBottomSheet(
+        context: context, builder: (context) => const Text("Modal"));
   }
 }
